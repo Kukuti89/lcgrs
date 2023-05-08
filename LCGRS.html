@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCGRS/UNESP</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.fct.unesp.br/imagens/icones/unesp.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.fct.unesp.br/imagens/icones/unesp.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .header {
+            text-align: center;
+            padding: 30px;
+            background-color: #e1e1e1;
+            border-bottom: 1px solid #ccc;
+        } 
+
+        .header img {
+            width: 200px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-top: 30px;
+        }
+
+        .introduction {
+            margin: 40px 0;
+            text-align: justify;
+        }
+
+        .introduction p {
+            display: none;
+        }
+
+        .introduction p:first-child {
+            display: block;
+        }
+
+        .equipment {
+            text-align: justify;
+            height: 1100px; 
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .equipment-image {
+            height: 150px;
+            width: auto;
+            object-fit: cover;
+        }
+
+        .equipment-title {
+            margin-top: 20px;
+        }
+
+        .equipment-info-wrapper {
+            margin-top: 15px;
+            height: 150px;
+            overflow: auto;
+        }
+
+        .equipment-info {
+            text-align: left;
+        }
+        .equipment-info p {
+            margin: 0;
+            font-size: 15px;
+            padding: 1px;
+        }
+        .equipment-separator {
+            border-top: 1px solid #ddd;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .equipment-hover {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .equipment-hover:hover {
+            transform: scale(1.05);
+        }
+
+        .equipment h3 {
+            margin-top: 25px;
+            font-size: 25px;
+            text-align: center
+        }
+
+        .equipment-title {
+            min-height: 100px; 
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .observations {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .observations h2 {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        .observations p {
+            line-height: 1.5;
+            margin-bottom: 0px;
+        }
+
+        .observations-separator {
+            border-top: 1px solid #ddd;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            height: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        @media screen and (min-width: 100px) {
+        .observations {
+            margin-top: 30px;
+        }
+        }
+
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            background-color: #e1e1e1;
+            border-top: 1px solid #ccc;
+            padding: 20px;
+        }
+    
+        #readMore {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .google-map {
+            width: 100%;
+            height: 200px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#readMore").click(function () {
+                $(".introduction p").slideDown();
+                $("#readMore").hide();
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="header">
+        <img src="https://www.fct.unesp.br/images/unesp-full-center.svg" alt="Logo da Universidade">
+        <h1>Laboratório de Caracterização e Gestão de Resíduos Sólidos</h1>
+    </div>
+    <div class="container">
+        <div class="introduction">
+            <p>O LCGRS/UNESP oferece soluções inovadoras e sustentáveis para a caracterização e tratamento de resíduos e materiais em geral. Criado através de uma parceria entre o Ministério Público Federal, o Ministério Público do Estado de São Paulo e a Companhia Energética de São Paulo, o LCGRS conta com uma infraestrutura de ponta e equipamentos de análise avançados para realizar a caracterização física e química de resíduos, visando garantir o correto destino e disposição final, além de promover a economia circular e contribuir para os Objetivos de Desenvolvimento Sustentável da Agenda 2030.
+
+                O LCGRS atende a universidades e empresas, oferecendo serviços de análise em áreas como engenharia, física, química e geologia aplicada ao meio ambiente. O laboratório utiliza técnicas como Difração de Raios X, Espectroscopia de Raios X e Análise Térmica para fornecer informações precisas e confiáveis sobre a composição e propriedades dos materiais. Além disso, desenvolve pesquisas inovadoras visando a caracterização e aproveitamento de resíduos, formando profissionais altamente qualificados para atuar no ensino, pesquisa e extensão.
+                
+                Com um enfoque multiusuário, o LCGRS está preparado para atender a uma ampla variedade de demandas, desde a análise de solos e argilas utilizadas na produção de materiais cerâmicos até a caracterização e redução de toxicidade de efluentes líquidos. Ao escolher o LCGRS, você estará contribuindo para a continuidade da pesquisa e formação de recursos humanos especializados, além de ajudar a promover um futuro mais sustentável e responsável.</p>
+            <p> 
+                
+            </p>
+            <p id="readMore">Leia mais</p>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4 equipment equipment-hover">
+                <div class="image-container">
+                <img src="https://www.shimadzu.com.br/analitica/cursos/edx/presencial/images/new_imgs/edx/edx-1.jpg" alt="Equipamento 1" class="img-fluid equipment-image">
+                </div>
+                <h3 class="equipment-title">Espectrômetro de Fluorescência de Raios X por Energia Dispersiva</h3>
+                <p>Nosso instrumento é um sofisticado espectrômetro de fluorescência de raios X de dispersão de energia da Shimadzu, modelo EDX 7000/8000, desenvolvido para proporcionar análises rápidas, precisas e não destrutivas de elementos químicos presentes em uma ampla variedade de materiais. Amplamente utilizado em setores como metalurgia, petroquímica, eletrônica e meio ambiente, este equipamento é capaz de detectar e quantificar a composição química de elementos em amostras sólidas, líquidas ou em pó, com a vantagem de preservar a integridade das amostras. A versatilidade do EDX 7000 torna-o uma ferramenta indispensável para pesquisadores e profissionais que buscam obter informações precisas sobre a composição elementar de materiais, auxiliando na garantia de qualidade, controle de processos e desenvolvimento de novos produtos.</p>
+                <div class="equipment-separator"></div>
+                <div class="equipment-info">
+                    <p><strong>Custo de análise (R$/hora)*:</strong></p>
+                    <p>150,00 à 300,00 (Comunidade acadêmica)</p>
+                    <p>200,00 à 400,00 (Comunidade externa)</p>
+                    <p><strong>Tipos de amostra:</strong></p>
+                    <p>Metais e ligas, compostos inorgânicos, materiais eletrônicos, polímeros, solos, resíduos de metalurgia, resíduos industriais, outros.</p>
+                </div>
+            </div>
+            <div class="col-md-4 equipment equipment-hover">
+                <div class="image-container">
+                <img src="https://mahzadkala.com/wp-content/uploads/2022/07/XRD-6101.png" alt="Equipamento 2" class="img-fluid equipment-image">
+                </div>
+                <h3 class="equipment-title">Difratômetro de Raios X</h3>
+                <p>O Difratômetro de Raios X modelo XRD 6000 da Shimadzu é um equipamento de alta performance projetado para análise estrutural de materiais cristalinos através da técnica de difração de raios X. Sua aplicação abrange diversos setores da indústria e da pesquisa como mineralógico, químico e de materiais, fornecendo informações cruciais sobre a estrutura cristalina, tamanho e orientação dos cristais, assim como a identificação de fases e determinação de tensões residuais em amostras sólidas. O XRD 6000 é especialmente valioso para pesquisadores e profissionais que trabalham no desenvolvimento e controle de qualidade de materiais e produtos, possibilitando a obtenção de dados precisos sobre as propriedades cristalográficas das amostras, o que contribui para a aperfeiçoamento de processos e inovação tecnológica de maneira ainda mais eficiente.</p>
+                <div class="equipment-separator"></div>
+                <div class="equipment-info">
+                    <p><strong>Custo de análise (R$/hora)*:</strong></p>
+                    <p>180,00 à 280,00 (Comunidade acadêmica)</p>
+                    <p>200,00 à 350,00 (Comunidade externa)</p>
+                    <p><strong>Tipos de amostra:</strong></p>
+                    <p>Materiais cristalinos, compostos inorgânicos, polímeros, materiais geológicos e filmes finos.</p>
+                </div>
+            </div>
+            <div class="col-md-4 equipment equipment-hover">
+                <div class="image-container">
+                <img src="https://www.artisantg.com/itemimages/TAInstruments_SDT_Q600_View1.jpg" alt="Equipamento 3" class="img-fluid equipment-image">
+            </div>
+                <h3 class="equipment-title">Análise Térmica</h3>
+                <p>O SDT Q600 da TA Instruments é um sistema de análise térmica simultânea que combina técnicas de termogravimetria (TGA) e calorimetria diferencial de varredura (DSC) em um único instrumento. Ele é projetado para fornecer informações detalhadas sobre as propriedades térmicas, decomposição e comportamento de diferentes materiais em função da temperatura, sendo amplamente aplicado em áreas como cerâmicas, polímeros, metalurgia e compósitos. Através do SDT Q600, pesquisadores e profissionais podem realizar estudos simultâneos de perda de massa e mudanças de entalpia em amostras, permitindo-os investigar fenômenos como transições de fase, oxidação, absorção e liberação de gases. A versatilidade e precisão do SDT Q600 o torna uma ferramenta essencial para o desenvolvimento e controle de qualidade e no avanço na pesquisa de materiais.</p>
+                <div class="equipment-separator"></div>
+                <div class="equipment-info">
+                    <p><strong>Custo de análise (R$/hora)*:</strong></p>
+                    <p>130,00 à 250,00 (Comunidade acadêmica)</p>
+                    <p>150,00 à 300,00 (Comunidade externa)</p>
+                    <p><strong>Tipos de amostra:</strong></p>
+                    <p>Polímeros, materiais compósitos, materiais inorgânicos, filmes finos, cerâmicas, biomateriais e materiais farmacêuticos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="observations-separator"></div>
+    </div>
+    <div class="observations">
+        <h2>Observações e agendamento</h2>
+        <p><i>*O custo das análises varia conforme o tipo de material, preparo da amostra e complexidade da metodologia a ser utilizada</i></p>
+        <p><i>Para realizar o agendamento do equipamento ou para tirar dúvidas sobre as análises, entre em contato pelo email <b>silvio.rainho@unesp.br</b></i></p>
+
+    </div>
+    <div class="footer">
+        <div class="row d-flex justify-content-center align-items-center my-3">
+            <div class="col-md-6 text-center">
+                <p>Rua Roberto Simonsen, 305, Centro Educacional</p>
+                <p>CEP 19060-900, Presidente Prudente, SP</p>
+                <p>Telefone: (18) 3229-5741</p>
+                <p>Email: silvio.rainho@unesp.br</p>
+            </div>
+            <div class="col-md-6">
+                <div class="google-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d327.1529445053962!2d-51.40793302817364!3d-22.123624403646993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1683550954331!5m2!1spt-BR!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>        
+</body>
+</html>
